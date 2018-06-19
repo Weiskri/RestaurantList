@@ -2,7 +2,8 @@ import React, { Component } from "react";
 
 class RestaurantItems extends Component {
   createRestaurants(item) {
-    return <li key={item.key}>{item.text}</li>
+    return <li onClick={() => this.delete(item.key)}
+              key={item.key}>{item.text}</li>
   }
 
   render() {
